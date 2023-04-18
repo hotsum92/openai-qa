@@ -1,0 +1,9 @@
+bs4
+pandas
+tiktoken
+openai
+matplotlib
+plotly
+scipy
+scikit-learn
+numpy

@@ -1,0 +1,127 @@
+<div>
+  <meta charset="UTF-8">
+
+  <style>
+
+    .chat-box {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 400px;
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 100%;
+      max-height: 100%;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ヘッダーのスタイル */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      padding: 0 20px;
+      background-color: #fff;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    header h2 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .chat-wrapper {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #f5f5f5;
+      overflow-y: scroll;
+    }
+
+    .chat__message {
+      margin-bottom: 20px;
+    }
+
+    .chat__message--received {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .chat__message--received .chat__message-text {
+      background-color: #fff;
+      color: #000;
+      border-radius: 20px 20px 20px 0px;
+      padding: 10px 15px;
+      max-width: 70%;
+    }
+
+    .chat__message--sent {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .chat__message--sent .chat__message-text {
+      background-color: #0084ff;
+      color: #fff;
+      border-radius: 20px 20px 0 20px;
+      padding: 10px 15px;
+      max-width: 70%;
+    }
+
+    .chat__message-text {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+
+    .input-wrapper {
+      display: flex;
+      height: 60px;
+      background-color: #fff;
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .input-wrapper input[type="text"] {
+      outline: none;
+      flex: 1;
+      height: 100%;
+      border: none;
+      padding: 0 20px;
+      font-size: 14px;
+    }
+
+    .input-wrapper button {
+      width: 80px;
+      height: 100%;
+      border: none;
+      background-color: #0084ff;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="chat-box">
+    <header>
+      <h2>チャットBOT</h2>
+      <img src="https://placehold.jp/30x30.png" alt="アイコン">
+    </header>
+    <div class="chat-wrapper">
+      <div class="chat">
+      </div>
+    </div>
+    <div class="input-wrapper">
+      <input type="text" placeholder="メッセージを入力してください">
+      <button>送信</button>
+    </div>
+  </div>
+
+</div>
